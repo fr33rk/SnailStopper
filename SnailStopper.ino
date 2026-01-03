@@ -56,16 +56,16 @@ void loop() {
       break;
 
     case Report:
-      //report();
+      report();
       changeState(Sleep);
       break;
 
     case Sleep:      
       delay(5000);
       digitalWrite(LED_BUILTIN, HIGH);    
-      if (loopCount++ == 4)  {
-        esp_deep_sleep_start();
-      }
+      //if (loopCount++ == 4)  {
+      esp_deep_sleep_start();
+      //}
       
       changeState(Start);
   }
